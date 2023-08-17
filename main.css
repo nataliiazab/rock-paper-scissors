@@ -29,8 +29,6 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 
-
-
 .photo-container {
   margin-bottom: 20px;
 }
@@ -136,7 +134,7 @@ body {
 /* Media Queries */
 @media (max-width: 800px) {
   .page__container {
-    padding: 50px 30px;
+    padding: 30px;
     border-radius: 15px;
   }
 
@@ -154,7 +152,16 @@ body {
   .emoji {
     font-size: 40px;
   }
+
+  .result-area {
+    margin: 10px;
+  }
+
+  .button {
+    width: 100%;
+  }
 }
+
 input[type="text"] {
   padding: 10px;
   border: none;
