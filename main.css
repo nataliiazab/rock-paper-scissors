@@ -29,9 +29,7 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 
-.page__container:hover {
-  transform: translateY(-10px);
-}
+
 
 .photo-container {
   margin-bottom: 20px;
