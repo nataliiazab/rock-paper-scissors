@@ -20,11 +20,11 @@ body {
 .page__container {
   width: 100%;
   max-width: 800px;
-  padding: 20px;
+  padding: 40px 20px;
   text-align: center;
   background-color: #ffffff;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 }
 
 .photo-container {
@@ -38,13 +38,13 @@ body {
 }
 
 .title {
-  font-size: 28px;
+  font-size: 32px;
   margin-bottom: 20px;
+  color: #333;
 }
 
 .game-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin: 40px 0;
@@ -67,9 +67,15 @@ body {
   transform: translateY(-5px);
 }
 
-.player-choice {
+.emoji {
   font-size: 50px;
   margin-bottom: 10px;
+}
+
+.name-display {
+  font-size: 18px;
+  margin-top: 5px;
+  color: #888;
 }
 
 .result-area {
@@ -115,7 +121,7 @@ body {
 /* Media Queries */
 @media (max-width: 800px) {
   .page__container {
-    padding: 30px;
+    padding: 50px 30px;
     border-radius: 15px;
   }
 
@@ -130,7 +136,7 @@ body {
     margin: 10px 0;
   }
 
-  .player-choice {
+  .emoji {
     font-size: 40px;
   }
 }
