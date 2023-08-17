@@ -1,48 +1,63 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Rock, Paper, Scissors</title>
-  <meta charset="UTF-8" />
-  <link rel="stylesheet" href="main.css" />
-</head>
-<body>
-  <div class="page__container">
-    <h1>Rock, Paper, Scissors</h1>
-    <div class="game-container">
-      <div class="player-container">
-        <div class="name">
-          <input type="text" id="player1-name" placeholder="Enter Player 1's Name" />
-          <button id="add-player1">Add Name</button>
+  <head>
+    <title>Rock, Paper, Scissors</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="page__container">
+      <h1>Rock, Paper, Scissors</h1>
+      <div class="game-container">
+        <div class="player-container">
+          <div class="name">
+            <input
+              type="text"
+              id="player1-name"
+              class="input"
+              placeholder="Enter Player 1's Name"
+            />
+            <button id="add-player1" class="button">Add Name</button>
+          </div>
+          <div id="player-1" class="player-info">
+            <div class="emoji" style="font-size: 50px">👊</div>
+            <div class="name-display" id="player1-name-display"></div>
+          </div>
         </div>
-        <div id="player-1" class="player-info">
-          <div class="emoji" style="font-size: 50px">👊</div>
-          <div class="name-display" id="player1-name-display"></div>
+
+        <div class="player-container">
+          <div class="name">
+            <input
+              type="text"
+              id="player2-name"
+              class="input"
+              placeholder="Enter Player 2's Name"
+            />
+            <button id="add-player2" class="button">Add Name</button>
+          </div>
+          <div id="player-2" class="player-info">
+            <div class="emoji" style="font-size: 50px">✋</div>
+            <div class="name-display" id="player2-name-display"></div>
+          </div>
         </div>
       </div>
 
-      <div class="player-container">
-        <div class="name">
-          <input type="text" id="player2-name" placeholder="Enter Player 2's Name" />
-          <button id="add-player2">Add Name</button>
-        </div>
-        <div id="player-2" class="player-info">
-          <div class="emoji" style="font-size: 50px">✋</div>
-          <div class="name-display" id="player2-name-display"></div>
-        </div>
+      <div id="result-area" style="margin: 0 50px; font-size: 30px">
+        <!-- Result will be displayed here -->
       </div>
+
+      <button id="play-btn">Play</button>
+
+      <footer class="footer">
+        Created by
+        <a
+          href="https://www.linkedin.com/in/nataliia-zablotska/"
+          class="link"
+          target="_blank"
+          >Natalie Zablotska</a
+        >.
+      </footer>
     </div>
-
-    <div id="result-area" style="margin: 0 50px; font-size: 30px">
-      <!-- Result will be displayed here -->
-    </div>
-
-    <button id="play-btn">Play</button>
-
-    <footer class="footer">
-      Created by
-      <a href="https://www.linkedin.com/in/nataliia-zablotska/" class="link" target="_blank">Natalie Zablotska</a>.
-    </footer>
-  </div>
-  <script src="index.js"></script>
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>
