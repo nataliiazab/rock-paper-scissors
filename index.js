@@ -1,64 +1,48 @@
 /* --- VARIABLES --- */
-  const choices = ['✊', '🤚', '✌️'];
-  const player1 = document.getElementById('player-1');
-
-  /* 1a. */
-  const player2 = document.getElementById('player-2');
-
-  /* 1b. */
-  const resultArea = document.getElementById('result-area');
-
-  /* 1c. */
-  const playBtn = document.getElementById('play-btn');
-
-  /* This will help check your results */
-  console.log(player2, resultArea, playBtn);
-
-/* ----------------------------------------------- */
+const choices = ['✊', '🤚', '✌️'];
+const player1 = document.getElementById('player-1');
+const player2 = document.getElementById('player-2');
+const resultArea = document.getElementById('result-area');
+const playBtn = document.getElementById('play-btn');
 
 /* --- FUNCTIONS --- */
+const generateChoice = () => {
+  let r = Math.floor(Math.random() * 3);
+  return choices[r];
+};
 
-  const generateChoice = () => {
-    let r = Math.floor(Math.random() * 3);
-    return choices[r]
-  };
+const insertHTML = (choice1, choice2, result) => {
+  player1.innerHTML = choice1;
+  player2.innerHTML = choice2;
+  resultArea.innerHTML = result;
+  resultArea.style.color = 'black';
+};
 
-  const insertHTML = (choice1, choice2, result) => {
-    player1.innerHTML = choice1;
-    player2.innerHTML = choice2;
-    resultArea.innerHTML = result;
-    resultArea.style.color = 'black';
-  };
+const decideWinner = (a, b, player1Name, player2Name) => {
+  if ((a === '✊' && b === '✊') || (a === '🤚' && b === '🤚') || (a === '✌️' && b === '✌️')) {
+    return "It's a draw!";
+  } else if ((a === '✊' && b === '✌️') || (a === '🤚' && b === '✊') || (a === '✌️' && b === '🤚')) {
+    return `${player1Name} won!`;
+  } else {
+    return `${player2Name} won!`;
+  }
+};
 
-  const decideWinner = (a, b) => {
-    if ((a === '✊' && b === '✊') || (a === '🤚' && b === '🤚') || (a === '✌️' && b === '✌️')) {
+const play = () => {
+  const player1Name = document.getElementById('player1-name').value;
+  const player2Name = document.getElementById('player2-name').value;
 
-      /* 3a. */ return "It's a draw!";
-
-    } else if ((a === '✊' && b === '✌️') || (a === '🤚' && b === '✊') || (a === '✌️' && b === '🤚')) {
-
-      /* 3b. */ return "Player 2 won!";
-
-    } else {
-
-      /* 3c. */ return "Player 1 won!";
-
-    }
-  };
-
-  const play = () => {
+  if (player1Name === '' || player2Name === '') {
+    resultArea.innerHTML = "Please enter both players' names.";
+    resultArea.style.color = 'red';
+  } else {
     let choice1 = generateChoice();
     let choice2 = generateChoice();
-    let result = decideWinner(choice1, choice2);
+    let result = decideWinner(choice1, choice2, player1Name, player2Name);
 
     insertHTML(choice1, choice2, result);
-  };
-
-/* ----------------------------------------------- */
+  }
+};
 
 /* --- EVENT LISTENERS --- */
-
-  /* 2. */
-  playBtn.addEventListener('click', play);
-
-/* ------------------------------- */
+playBtn.addEventListener('click', play);
