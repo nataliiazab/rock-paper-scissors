@@ -2,6 +2,9 @@
 
 This is a simple Rock, Paper, Scissors game built using HTML, CSS, and JavaScript. The game allows two players to enter their names, make their choices, and see the winner's result.
 
+![Rock-Paper-Scissors-Game](https://github.com/nataliiazab/rock-paper-scissors/assets/113237479/9b8db6ea-4aae-45e5-9b4a-83f049684269)
+
+
 ## Features
 
 - Enter Player Names: Players can enter their names before starting the game.
